@@ -3,7 +3,7 @@ REGISTRY=shurix
 
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
-TARGETARCH=amd64 #arm64
+TARGETARCH=arm64
 
 format:
 	gofmt -s -w ./
