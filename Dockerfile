@@ -1,10 +1,10 @@
-ARG buildname=linux
+ARG buildname=build
 
-FROM quay.io/projectquay/golang:1.20 as builder
+FROM golang:1.22.1 as builder
 
 WORKDIR /go/src/app
 COPY . .
-RUN make $buildname
+RUN make build
 
 FROM scratch
 WORKDIR /
